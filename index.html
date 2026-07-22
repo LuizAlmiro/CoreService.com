@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core Service — Conecta, gerencia e entrega resultados</title>
+<meta name="description" content="Hub de soluções corporativas que entende sua demanda, seleciona parceiros, coordena o atendimento e acompanha cada entrega.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="https://core-service.gomesborges22.chatgpt.site/core-symbol.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= SPINE (linha de sinal contínua) ================= -->
+<div class="spine" aria-hidden="true"><div class="spine-fill" id="spineFill"></div></div>
+
+<!-- ================= NAV ================= -->
+<header class="site" id="siteHeader">
+  <div class="wrap nav">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark-wrap"><img src="https://core-service.gomesborges22.chatgpt.site/core-symbol.png" class="brand-mark" alt="Core Service"></span>
+      <span class="brand-name">CORE <b>SERVICE</b></span>
+    </a>
+
+    <nav class="links">
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#como-funciona">O Hub</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#gestao-fornecedores">Qualificação</a>
+      <a href="#resultados">Resultados</a>
+    </nav>
+
+    <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener" class="nav-cta">Fale com a gente</a>
+
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+  </div>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#quem-somos">Quem somos</a>
+    <a href="#como-funciona">O Hub</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#gestao-fornecedores">Qualificação</a>
+    <a href="#resultados">Resultados</a>
+    <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener" class="nav-cta">Fale com a gente</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="inicio" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Hub de soluções corporativas</span>
+      <h1>Um único ponto de contato.<br><em>Uma rede inteira de soluções.</em></h1>
+      <p class="lede">A Core Service entende sua demanda, seleciona os parceiros certos, coordena o atendimento e acompanha cada entrega — do início ao resultado.</p>
+
+      <div class="hero-actions">
+        <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener" class="btn primary">Tenho uma demanda ↗</a>
+        <a href="#como-funciona" class="btn ghost">Entenda o modelo</a>
+      </div>
+
+      <ul class="signal-tags">
+        <li><span class="dot dot-teal"></span>Conexão inteligente</li>
+        <li><span class="dot dot-amber"></span>Gestão próxima</li>
+        <li><span class="dot dot-soft"></span>Entrega acompanhada</li>
+      </ul>
+    </div>
+
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 620 460" class="circuit">
+        <!-- traces -->
+        <path id="traceMain" class="trace" d="M70 230 L300 230" />
+        <path id="traceOp" class="trace trace-op" d="M300 230 C 400 230, 420 96, 520 96" />
+        <path id="traceGe" class="trace trace-ge" d="M300 230 L520 230" />
+        <path id="traceMk" class="trace trace-mk" d="M300 230 C 400 230, 420 364, 520 364" />
+
+        <!-- pulses -->
+        <circle r="5" class="pulse pulse-op"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s" path="M70 230 L300 230 C 400 230, 420 96, 520 96"/></circle>
+        <circle r="5" class="pulse pulse-ge"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.05s" path="M70 230 L300 230 L520 230"/></circle>
+        <circle r="5" class="pulse pulse-mk"><animateMotion dur="3.2s" repeatCount="indefinite" begin="2.1s" path="M70 230 L300 230 C 400 230, 420 364, 520 364"/></circle>
+
+        <!-- left node -->
+        <g class="node node-left">
+          <circle cx="70" cy="230" r="26"/>
+          <text x="70" y="234" text-anchor="middle">SUA<tspan x="70" dy="13">EMPRESA</tspan></text>
+        </g>
+
+        <!-- center node -->
+        <g class="node node-core">
+          <circle class="ring" cx="300" cy="230" r="44"/>
+          <circle cx="300" cy="230" r="30"/>
+          <text x="300" y="236" text-anchor="middle">CORE</text>
+        </g>
+
+        <!-- right nodes -->
+        <g class="node node-right node-op">
+          <circle cx="520" cy="96" r="24"/>
+          <text x="520" y="100" text-anchor="middle">OPS</text>
+        </g>
+        <g class="node node-right node-ge">
+          <circle cx="520" cy="230" r="24"/>
+          <text x="520" y="234" text-anchor="middle">GESTÃO</text>
+        </g>
+        <g class="node node-right node-mk">
+          <circle cx="520" cy="364" r="24"/>
+          <text x="520" y="368" text-anchor="middle">MKT</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= QUEM SOMOS ================= -->
+<section id="quem-somos" class="whoweare">
+  <div class="wrap statement-grid reveal">
+    <div class="statement-main">
+      <span class="eyebrow">Quem somos</span>
+      <h2>A Coreservice é um hub inteligente que conecta empresas, fornecedores e especialistas.</h2>
+    </div>
+    <div class="statement-side">
+      <p>Gerenciamos contratos e entregamos soluções completas com eficiência, transparência e confiança. Nosso Hub conecta clientes, fornecedores e gestores em uma única plataforma, centralizando informações, solicitações e o acompanhamento de todas as demandas.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="statement">
+  <div class="wrap statement-grid reveal">
+    <div class="statement-main">
+      <span class="eyebrow">Mais do que indicação</span>
+      <h2>Você não recebe uma lista de contatos.<br>Você recebe uma solução gerenciada.</h2>
+    </div>
+    <div class="statement-side">
+      <p>O parceiro executa tecnicamente. A Core permanece responsável pela experiência comercial, pela coordenação da solução e pelo relacionamento com sua empresa.</p>
+      <div class="mono-annotation">
+        <span>parceiro <b>→</b> executa</span>
+        <span>core <b>→</b> coordena, garante, responde</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section id="como-funciona" class="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como a Core funciona</span>
+      <h2>Da necessidade ao resultado.</h2>
+      <p>Centralizamos o caminho para que sua empresa ganhe agilidade, clareza e confiança em cada contratação.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"><div class="timeline-fill" id="timelineFill"></div></div>
+
+      <div class="tstep reveal">
+        <span class="tnum">01</span>
+        <h4>Entendemos</h4>
+        <p>Você conta o que precisa. Nós traduzimos a demanda em um escopo claro.</p>
+      </div>
+      <div class="tstep reveal">
+        <span class="tnum">02</span>
+        <h4>Selecionamos</h4>
+        <p>Acionamos os especialistas certos para cada parte da solução.</p>
+      </div>
+      <div class="tstep reveal">
+        <span class="tnum">03</span>
+        <h4>Coordenamos</h4>
+        <p>Organizamos prazos, comunicação e execução em um único fluxo.</p>
+      </div>
+      <div class="tstep reveal">
+        <span class="tnum">04</span>
+        <h4>Acompanhamos</h4>
+        <p>Seguimos do início à entrega e cuidamos da experiência comercial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= NOSSOS NÚCLEOS ================= -->
+<section id="solucoes" class="nucleos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nossos núcleos</span>
+      <h2>Uma Core. Três frentes.</h2>
+      <p>Reunimos demandas diferentes sob a mesma gestão, conectando cada projeto a especialistas preparados para executar.</p>
+    </div>
+
+    <div class="nuc-tabs reveal" role="tablist">
+      <button class="nuctab active" data-nuc="operacoes" role="tab" aria-selected="true">
+        <span class="ntag">01 · CORE</span>Operações
+      </button>
+      <button class="nuctab" data-nuc="gestao" role="tab" aria-selected="false">
+        <span class="ntag">02 · CORE</span>Gestão
+      </button>
+      <button class="nuctab" data-nuc="marketing" role="tab" aria-selected="false">
+        <span class="ntag">03 · CORE</span>Marketing
+      </button>
+    </div>
+
+    <div class="nuc-panels reveal">
+      <div class="nucpanel active" data-panel="operacoes">
+        <div class="chips">
+          <span>Climatização</span><span>Elétrica</span><span>Hidráulica</span><span>Manutenção predial</span>
+          <span>Limpeza empresarial</span><span>Instalações</span><span>Comunicação visual</span>
+          <span>Segurança eletrônica</span><span>Reformas</span><span>Montagem</span><span>Jardinagem</span>
+        </div>
+      </div>
+      <div class="nucpanel" data-panel="gestao">
+        <div class="chips">
+          <span>BPO financeiro</span><span>Processos empresariais</span><span>Recursos humanos</span>
+          <span>Recrutamento</span><span>Treinamentos</span><span>Consultoria comercial</span>
+          <span>Indicadores de desempenho</span><span>Planejamento</span><span>Pesquisa de mercado</span>
+        </div>
+      </div>
+      <div class="nucpanel" data-panel="marketing">
+        <div class="chips">
+          <span>Branding</span><span>Design</span><span>Fotografia</span><span>Vídeo</span>
+          <span>Produção de conteúdo</span><span>Eventos</span><span>Materiais promocionais</span>
+          <span>Campanhas</span><span>Comunicação interna</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= GESTÃO DE FORNECEDORES ================= -->
+<section id="gestao-fornecedores" class="gestao-fornecedores">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Gestão de fornecedores</span>
+      <h2>Da homologação ao resultado: como cuidamos de cada parceiro.</h2>
+      <p>Um processo estruturado para que sua empresa tenha fornecedores confiáveis, contratos organizados e resultados mensuráveis.</p>
+    </div>
+
+    <div class="accordion reveal" id="gfAccordion">
+
+      <div class="acc-item active" data-acc="1">
+        <button class="acc-head" type="button">
+          <span class="acc-num">01</span>
+          <span class="acc-title">Homologação de Fornecedores</span>
+          <span class="acc-plus">+</span>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <p>Todos os nossos parceiros passam por um processo rigoroso de homologação, com análise técnica, documentação, experiência e capacidade operacional antes de integrarem nossa rede.</p>
+          <ul class="checklist">
+            <li>Validação de documentação</li>
+            <li>Análise técnica e operacional</li>
+            <li>Avaliação de experiência no segmento</li>
+            <li>Monitoramento contínuo de desempenho</li>
+          </ul>
+          <p class="acc-close">Assim, garantimos fornecedores qualificados, serviços padronizados e mais segurança para nossos clientes.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item" data-acc="2">
+        <button class="acc-head" type="button">
+          <span class="acc-num">02</span>
+          <span class="acc-title">Gestão de Contratos</span>
+          <span class="acc-plus">+</span>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <p>Organizamos todos os seus contratos em um só lugar, com controle de prazos, cronogramas, serviços executados e obrigações, garantindo mais segurança, transparência e eficiência.</p>
+          <ul class="checklist">
+            <li>Controle de SLAs</li>
+            <li>Histórico de atendimentos</li>
+            <li>Relatórios e indicadores</li>
+            <li>Alertas de vencimento e renovação</li>
+          </ul>
+          <p class="acc-close">Tudo para que sua operação funcione com mais organização e previsibilidade.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item" data-acc="3">
+        <button class="acc-head" type="button">
+          <span class="acc-num">03</span>
+          <span class="acc-title">Geração de Valor</span>
+          <span class="acc-plus">+</span>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <p>Vamos além da operação: acompanhamos custos e negociações para que cada contrato traga retorno real para sua empresa.</p>
+          <ul class="checklist">
+            <li>Negociação estratégica com fornecedores</li>
+            <li>Controle de custos e indicadores</li>
+            <li>Acompanhamento de contratos e SLAs</li>
+            <li>Processos padronizados e transparentes</li>
+          </ul>
+          <p class="acc-close">Nossa gestão identifica oportunidades de otimização, reduz desperdícios e melhora o controle dos contratos — mais eficiência, previsibilidade e economia para a sua empresa.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item" data-acc="4">
+        <button class="acc-head" type="button">
+          <span class="acc-num">04</span>
+          <span class="acc-title">Resultados para sua Empresa</span>
+          <span class="acc-plus">+</span>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <p>Tudo o que sua empresa precisa acompanhar, em um só lugar, com um único ponto de contato.</p>
+          <ul class="checklist">
+            <li>Fornecedores qualificados e acompanhados de perto</li>
+            <li>Indicadores e relatórios em tempo real</li>
+            <li>Comunicação centralizada e transparente</li>
+            <li>Abertura e acompanhamento de solicitações</li>
+          </ul>
+          <p class="acc-close">Sua empresa conta com parceiros preparados para entregar os melhores resultados, com mais controle, agilidade e eficiência para toda a operação.</p>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= POR QUE A CORE ================= -->
+<section id="resultados" class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que a Core</span>
+      <h2>Menos fornecedores para gerenciar.<br>Mais resultados para acompanhar.</h2>
+    </div>
+
+    <div class="why-grid reveal">
+      <div class="wcard wcard-big">
+        <span class="wnum">01</span>
+        <h4>Um relacionamento</h4>
+        <p>Centralizamos a comunicação mesmo quando a solução envolve diferentes especialidades.</p>
+      </div>
+      <div class="wcard">
+        <span class="wnum">02</span>
+        <h4>Curadoria de parceiros</h4>
+        <p>Selecionamos o perfil técnico adequado ao escopo, à região e à realidade da demanda.</p>
+      </div>
+      <div class="wcard">
+        <span class="wnum">03</span>
+        <h4>Visão de ponta a ponta</h4>
+        <p>Acompanhamos o processo completo para manter alinhamento, ritmo e qualidade de entrega.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE (rede de núcleos) ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Climatização</span><span>·</span><span>Elétrica</span><span>·</span><span>Hidráulica</span><span>·</span>
+    <span>BPO financeiro</span><span>·</span><span>Recursos humanos</span><span>·</span><span>Branding</span><span>·</span>
+    <span>Fotografia</span><span>·</span><span>Eventos</span><span>·</span><span>Segurança eletrônica</span><span>·</span>
+    <span>Consultoria comercial</span><span>·</span><span>Campanhas</span><span>·</span>
+    <span>Climatização</span><span>·</span><span>Elétrica</span><span>·</span><span>Hidráulica</span><span>·</span>
+    <span>BPO financeiro</span><span>·</span><span>Recursos humanos</span><span>·</span><span>Branding</span><span>·</span>
+    <span>Fotografia</span><span>·</span><span>Eventos</span><span>·</span><span>Segurança eletrônica</span><span>·</span>
+    <span>Consultoria comercial</span><span>·</span><span>Campanhas</span><span>·</span>
+  </div>
+</div>
+
+<!-- ================= REDE DE PARCEIROS ================= -->
+<section id="parceiros" class="partners">
+  <div class="wrap reveal">
+    <span class="eyebrow">Rede de parceiros</span>
+    <h2>Você entrega excelência.<br>A Core conecta oportunidades.</h2>
+    <p>Buscamos empresas e especialistas que valorizam qualidade, transparência e compromisso com o cliente.</p>
+    <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener" class="btn primary">Quero ser parceiro ↗</a>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="cta">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center;">Vamos conectar?</span>
+    <h2>Conte o que sua empresa precisa.<br>O resto, a Core organiza.</h2>
+    <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener" class="btn primary">Falar sobre minha demanda ↗</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap foot-grid">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark-wrap"><img src="https://core-service.gomesborges22.chatgpt.site/core-symbol.png" class="brand-mark" alt="Core Service"></span>
+      <span class="brand-name">CORE <b>SERVICE</b></span>
+    </a>
+    <p class="foot-tag">Conecta • Gerencia • Entrega resultados</p>
+    <div class="foot-links">
+      <a href="https://www.instagram.com/coreservice_/" target="_blank" rel="noopener">@coreservice_ ↗</a>
+      <span>© 2026 Core Service</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
