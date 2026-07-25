@@ -19,7 +19,7 @@ revealEls.forEach(el => io.observe(el));
 
 // ---- spine fill (progresso geral da página) ----
 const spineFill = document.getElementById('spineFill');
-function updateSpine(){
+function updateSpine() {
   const doc = document.documentElement;
   const scrollTop = doc.scrollTop || document.body.scrollTop;
   const scrollHeight = doc.scrollHeight - doc.clientHeight;
@@ -30,7 +30,7 @@ function updateSpine(){
 // ---- timeline fill (progresso local da seção "Como funciona") ----
 const timeline = document.getElementById('timeline');
 const timelineFill = document.getElementById('timelineFill');
-function updateTimeline(){
+function updateTimeline() {
   if (!timeline || !timelineFill) return;
   const rect = timeline.getBoundingClientRect();
   const vh = window.innerHeight;
@@ -40,7 +40,7 @@ function updateTimeline(){
   timelineFill.style.height = pct + '%';
 }
 
-function onScroll(){
+function onScroll() {
   updateSpine();
   updateTimeline();
 }
@@ -60,22 +60,43 @@ nucTabs.forEach(tab => tab.addEventListener('click', () => {
   document.querySelector('.nucpanel[data-panel="' + target + '"]').classList.add('active');
 }));
 
-// ---- accordion Gestão de Fornecedores ----
-const accItems = document.querySelectorAll('.acc-item');
-accItems.forEach(item => {
-  const head = item.querySelector('.acc-head');
-  head.addEventListener('click', () => {
-    const wasActive = item.classList.contains('active');
-    accItems.forEach(i => i.classList.remove('active'));
-    if (!wasActive) item.classList.add('active');
-  });
-});
+// ---- Gestão de Fornecedores: agora exibido como grid estático (sem toggle) ----
 
-// ---- header: leve sombra ao rolar ----
+// ---- header: sombra + esconder ao rolar para baixo, mostrar ao rolar para cima ----
 const header = document.getElementById('siteHeader');
-function onHeaderScroll(){
-  if (window.scrollY > 8) header.style.boxShadow = '0 12px 30px -20px rgba(0,0,0,0.6)';
+let lastScrollY = window.scrollY;
+const HIDE_THRESHOLD = 80; // só passa a esconder depois de rolar um pouco
+
+function onHeaderScroll() {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > 8) header.style.boxShadow = '0 12px 30px -20px rgba(0,0,0,0.6)';
   else header.style.boxShadow = 'none';
+
+  if (currentScrollY <= HIDE_THRESHOLD) {
+    // perto do topo: sempre visível
+    header.classList.remove('hide');
+  } else if (currentScrollY > lastScrollY) {
+    // rolando para baixo
+    header.classList.add('hide');
+  } else if (currentScrollY < lastScrollY) {
+    // rolando para cima
+    header.classList.remove('hide');
+  }
+
+  lastScrollY = currentScrollY;
 }
 document.addEventListener('scroll', onHeaderScroll, { passive: true });
 onHeaderScroll();
+
+// fecha o painel mobile automaticamente se o header for escondido com o menu aberto
+if (panel) {
+  const headerObserver = new MutationObserver(() => {
+    if (header.classList.contains('hide') && panel.classList.contains('show')) {
+      panel.classList.remove('show');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    }
+  });
+  headerObserver.observe(header, { attributes: true, attributeFilter: ['class'] });
+}
