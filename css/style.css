@@ -204,7 +204,7 @@ header.site.hide {
 }
 
 .brand-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'sora', serif;
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: 0;
@@ -749,6 +749,7 @@ nav.links a:hover::after {
 
 #quem-somos.whoweare {
   background: var(--bg-onlight);
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
 }
 
 #quem-somos.whoweare .eyebrow,
@@ -1562,4 +1563,4 @@ section.statement .mono-annotation b {
     flex-direction: column;
     align-items: flex-start;
   }
-}
+} 
